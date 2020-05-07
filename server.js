@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-const items = require('./routs/api/items');
+const projects = require('./routes/api/items');
 
 app.use(bodyParser.json());
 
@@ -14,6 +14,8 @@ mongoose
     .connect(db, { useUnifiedTopology: true })
     .then(() => console.log('Connected!'))
     .catch(err => console.log(err));
+
+    app.use('/api/items',projects);
 
     const port = process.env.PORT || 5000;
 
