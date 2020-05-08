@@ -1,0 +1,14 @@
+html, body, head{
+    margin: 0;
+}
+
+.App{
+    display: flex;
+}
+
+#root{
+    display: flex;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
