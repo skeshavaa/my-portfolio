@@ -1,43 +1,60 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import { Container, Box } from '@material-ui/core'
-import Keshavaa from '../assets/images/me.JPG'
+import { Divider, IconButton } from '@material-ui/core'
+import  Layout  from '../components/layout.js'
+
+import Keshavaa from '../assets/images/me.jpg'
 import styled from 'styled-components';
 
 const Home = () => {
 
-    return(
-        <Wrapper>
-            <CenterText>
-                <Text>Hey <br/> Check my stuff out</Text>
-            </CenterText>
-            <Box display="flex" flexDirection="column" justifyContent="center">
-            <Avatar src={Keshavaa} />
-            </Box>
-        </Wrapper>
+    return (
+        <div>
+            <Layout />
+            <Wrapper>
+                <Row>
+                    <Text padding="30px">Hi, I'm Keshavaa</Text>
+                </Row>
+                <Row>
+                    <Avatar src={Keshavaa} />
+                </Row>
+                <Spacer space="30px" />
+                <Divider variant="middle" />
+                <Row>
+                    <Text padding="30px">Look at my stuff</Text>
+                </Row>
+            </Wrapper>
+        </div>
     )
 }
 
 export default Home
 
 const Wrapper = styled.div`
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
+
 `
 
-const CenterText = styled.div`
-    text-align: center;
+const Row = styled.div`
+    display: flex;
+    justify-content: center;
+    width: 100vw;
 `
 
 const Text = styled.p`
-    font-family: 'Inconsolata';
+    font-family: 'Abel';
     font-size: 50px;
+    text-align: center;
+    padding: ${props => props.padding}
 `
 
 const Avatar = styled.img`
-    width: 100px;
-    height: 100px;
+    max-height: 250px;
+    max-width: 250px;
     border-radius: 50%;
 `
+
+const Spacer = styled.div`
+    padding: ${props => props.space}
+`
+
 
