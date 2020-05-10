@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import LoadingCards from '../sections/loading-cards'
+import ProjectCards from '../sections/project-cards'
 import Layout from '../components/layout'
 import Heading from '../components/heading'
 import axios from 'axios'
+
 
 const Projects = () => {
 
@@ -14,33 +17,18 @@ const Projects = () => {
             setLoading(false);
         })
 
-    if (Loading){
-        return (
-            <div>
-                <Layout />
-                <Heading title="Projects"/>
+    // let Cards = Loading
+    //     ? <LoadingCards count={3}/>
+    //     : <ProjectCards />
 
-            </div>
-        )
-    }
-    else{
-        console.log(data)
-        return(
-            <div>
-                {data.data.map((project) => {
-                    return(
-                        <div>
-                            {project.image.map((img) => {
-                                return(
-                                    <img src={img} />
-                                )
-                            })}
-                        </div>
-                    )
-                })}
-            </div>
-        )
-    }
+    return (
+        <div>
+            <Layout />
+            <Heading title="Projects"/>
+            {/* {Cards} */}
+            <LoadingCards count={3}/>
+        </div>
+    )
 }
 
 export default Projects
