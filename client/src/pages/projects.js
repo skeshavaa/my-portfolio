@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import LoadingCards from '../sections/loading-cards'
 import ProjectCards from '../sections/project-cards'
 import Layout from '../components/layout'
@@ -11,22 +11,24 @@ const Projects = () => {
     const [data, setData] = useState([])
     const [Loading, setLoading] = useState(true)
 
-    axios.get('api/items')
+    useEffect(() => {
+        axios.get('api/items')
         .then((projects) => {
             setData(projects);
             setLoading(false);
         })
+    }, []);
 
-    // let Cards = Loading
-    //     ? <LoadingCards count={3}/>
-    //     : <ProjectCards />
+
+    let Cards = Loading
+        ? <LoadingCards count={3}/>
+        : <ProjectCards projects={data}/>
 
     return (
         <div>
             <Layout />
             <Heading title="Projects"/>
-            {/* {Cards} */}
-            <LoadingCards count={3}/>
+            {Cards}
         </div>
     )
 }

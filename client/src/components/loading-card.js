@@ -15,4 +15,5 @@ const ProjectWrapper = styled.div`
     min-width: 400px;
     max-width: 500px;
     text-align: center;
+    background-color: black;
 `

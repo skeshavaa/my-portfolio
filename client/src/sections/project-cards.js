@@ -1,11 +1,35 @@
 import React from 'react'
+import styled from 'styled-components'
+import ProjectCard from '../components/project-card'
 
-const ProjectCards = () => {
+const ProjectCards = (props) => {
+
+    var Cards = [];
+
+    for (var i = 0; i < props.projects.data.length; i++){
+        Cards.push(<ProjectCard project={props.projects.data[i]}/>);
+    }
+
     return (
-        <div>
-            <h1>Project Cardsss</h1>
-        </div>
+        <OuterWrapper>
+            <Wrapper>
+                {Cards}
+            </Wrapper>
+        </OuterWrapper>
     )
 }
 
 export default ProjectCards
+
+const OuterWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+`
+
+const Wrapper = styled.div`
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+`
