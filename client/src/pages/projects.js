@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const Projects = () => {
 
-    const [Data, setData] = useState([])
+    const [data, setData] = useState([])
     const [Loading, setLoading] = useState(true)
 
     axios.get('api/items')
@@ -13,17 +13,27 @@ const Projects = () => {
             setData(projects);
             setLoading(false);
         })
-    
 
-    let place = Loading ? <h1>true</h1> : <h1>false</h1>
+    if (Loading){
+        return (
+            <div>
+                <Layout />
+                <Heading title="Projects"/>
 
-    return (
-        <div>
-            <Layout />
-            <Heading title="Projects"/>
-            {place}
-        </div>
-    )
+            </div>
+        )
+    }
+    else{
+        return(
+            <div>
+                {data.data.map((project) => {
+                    return(
+                        <h1>{project.name}</h1>
+                    )
+                })}
+            </div>
+        )
+    }
 }
 
 export default Projects
