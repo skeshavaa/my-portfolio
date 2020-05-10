@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import MenuIcon from '@material-ui/icons/Menu'
 import { IconButton, Drawer } from '@material-ui/core'
+import DrawerContent from './drawerContent'
 
 const Layout = () => {
     const [Handler, setHandler] = useState(false)
@@ -16,7 +17,7 @@ const Layout = () => {
                 <MenuIcon />
             </IconButton>
             <Drawer open={Handler} onClose={handler}>
-                <h2>sdf</h2>
+                <DrawerContent />
             </Drawer>
         </div>
     )

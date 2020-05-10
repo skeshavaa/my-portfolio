@@ -10,5 +10,11 @@ html, body, head, p, h1, h2{
     display: flex;
 }
 
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
