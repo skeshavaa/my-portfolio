@@ -24,11 +24,18 @@ const Projects = () => {
         )
     }
     else{
+        console.log(data)
         return(
             <div>
                 {data.data.map((project) => {
                     return(
-                        <h1>{project.name}</h1>
+                        <div>
+                            {project.image.map((img) => {
+                                return(
+                                    <img src={img} />
+                                )
+                            })}
+                        </div>
                     )
                 })}
             </div>

@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
     const newProject = new Project({
         name: req.body.name,
         description: req.body.description,
-        image: req.body.image,
+        image: req.body.image.split(','),
         tags: req.body.tags.split(',')
     });
 
