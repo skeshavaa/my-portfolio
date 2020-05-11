@@ -9,7 +9,7 @@ const ProjectCard = (props) => {
 
     return (
         <OuterWrapper>
-            <Card>
+            <Card raised={true}>
             <ProjectWrapper>
                 <ImageWrapper>
                     <Image src={props.project.image[0]} />

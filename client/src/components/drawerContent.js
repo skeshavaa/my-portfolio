@@ -11,9 +11,9 @@ const DrawerContent = () => {
             <Image src={Logo} />
             <List>
                 <Item text="Home" route="/"></Item>
-                <Item text="About" route="/about"></Item>
+                <Item text="Skills" route="/skills"></Item>
                 <Item text="Projects" route="/projects"></Item>
-                <Item text="Resume" route="/about"></Item>
+                <Item text="Resume" route="/resume"></Item>
                 <Item text="Contact Me" route="/about"></Item>
             </List>
         </Wrapper>
