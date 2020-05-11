@@ -1,29 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, Button } from '@material-ui/core'
+import { Card, Button, ButtonGroup, IconButton } from '@material-ui/core'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import LaunchIcon from '@material-ui/icons/Launch'
+
 
 const ProjectCard = (props) => {
-    
+
     return (
         <Card>
             <ProjectWrapper>
                 <ImageWrapper>
-                    <Image src={props.project.image[0]}/>
+                    <Image src={props.project.image[0]} />
                 </ImageWrapper>
                 <Container>
-                <Title>{props.project.name}</Title>
-                <Description>{props.project.description}</Description>
+                    <Title>{props.project.name}</Title>
+                    <Description>{props.project.description}</Description>
                 </Container>
                 <TagsContainer>
                     {props.project.tags.map((tag) => {
-                        return(
+                        return (
                             <Tag>{tag}</Tag>
                         )
                     })}
                 </TagsContainer>
                 <ButtonContainer>
-                    <Button href={props.project.code} target="_blank" variant="outlined">Code</Button>
-                    <Button href={props.project.project}  target="_blank" variant="outlined">Project</Button>
+                    <ButtonGroup variant="outlined">
+                        <IconButton href={props.project.code} target="_blank" variant="outlined"><GitHubIcon/></IconButton>
+                        <IconButton href={props.project.project} target="_blank" variant="outlined"><LaunchIcon /></IconButton>
+                    </ButtonGroup>
                 </ButtonContainer>
             </ProjectWrapper>
         </Card>
@@ -95,6 +100,7 @@ const ButtonContainer = styled.div`
     margin-left: 25px;
     margin-right: 25px;
     display: flex;
+    align-self: flex-end;
     justify-content: space-between;
     margin-top: auto;
     margin-bottom: 25px;

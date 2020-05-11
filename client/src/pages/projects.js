@@ -4,6 +4,7 @@ import ProjectCards from '../sections/project-cards'
 import Layout from '../components/layout'
 import Heading from '../components/heading'
 import axios from 'axios'
+import styled from 'styled-components'
 
 
 const Projects = () => {
@@ -25,12 +26,16 @@ const Projects = () => {
         : <ProjectCards projects={data}/>
 
     return (
-        <div>
+        <Wrapper>
             <Layout />
             <Heading title="Projects"/>
             {Cards}
-        </div>
+        </Wrapper>
     )
 }
 
 export default Projects
+
+const Wrapper = styled.div`
+    max-width: 100vw;
+`
