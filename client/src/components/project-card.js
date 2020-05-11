@@ -10,8 +10,10 @@ const ProjectCard = (props) => {
                 <ImageWrapper>
                     <Image src={props.project.image[0]}/>
                 </ImageWrapper>
+                <Container>
                 <Title>{props.project.name}</Title>
                 <Description>{props.project.description}</Description>
+                </Container>
                 <TagsContainer>
                     {props.project.tags.map((tag) => {
                         return(
@@ -59,30 +61,33 @@ const Image = styled.img`
 const Title = styled.h1`
     font-family: 'Inconsolata';
     font-size: 20px;
-    padding-left: 25px;
+    font-weight: bolder;
     padding-top: 15px;
 `
 
 const Description = styled.p`
     font-family: 'Abel';
     font-size: 15px;
-    padding-left: 25px;
-    padding-top: 5px;
+    padding-top: 15px;
     line-height: 25px;
+`
+
+const Container = styled.div`
+    padding: 25px;
 `
 
 const TagsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     padding-left: 20px;
-    
 `
 
 const Tag = styled.a`
     padding: 7px;
-    margin: 5px 10px 5px 5px;
+    margin: 10px 5px 5px 5px;
     background: #C0E4FC;
     border-radius: 5px;
+    font-size: 15px;
     font-family: "Inconsolata";
 `
 
@@ -93,4 +98,5 @@ const ButtonContainer = styled.div`
     justify-content: space-between;
     margin-top: auto;
     margin-bottom: 25px;
+    padding-top: 25px;
 `
