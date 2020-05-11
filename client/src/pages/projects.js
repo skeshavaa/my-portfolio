@@ -22,7 +22,7 @@ const Projects = () => {
 
 
     let Cards = Loading
-        ? <LoadingCards count={3}/>
+        ? <LoadingCards count={4}/>
         : <ProjectCards projects={data}/>
 
     return (

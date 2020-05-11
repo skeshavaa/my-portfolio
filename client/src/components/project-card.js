@@ -8,7 +8,8 @@ import LaunchIcon from '@material-ui/icons/Launch'
 const ProjectCard = (props) => {
 
     return (
-        <Card>
+        <OuterWrapper>
+            <Card>
             <ProjectWrapper>
                 <ImageWrapper>
                     <Image src={props.project.image[0]} />
@@ -32,10 +33,15 @@ const ProjectCard = (props) => {
                 </ButtonContainer>
             </ProjectWrapper>
         </Card>
+        </OuterWrapper>
     )
 }
 
 export default ProjectCard
+
+const OuterWrapper = styled.div`
+    margin: 15px 5px 15px 5px; 
+`
 
 const ProjectWrapper = styled.div`
     min-width: 200px;
