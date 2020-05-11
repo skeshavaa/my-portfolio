@@ -18,7 +18,9 @@ router.post('/', (req, res) => {
         name: req.body.name,
         description: req.body.description,
         image: req.body.image.split(','),
-        tags: req.body.tags.split(',')
+        tags: req.body.tags.split(','),
+        code: req.body.code,
+        project: req.body.project
     });
 
     newProject.save().then(project => res.json(project))

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card } from '@material-ui/core'
+import { Card, Button } from '@material-ui/core'
 
 const ProjectCard = (props) => {
     
@@ -11,6 +11,18 @@ const ProjectCard = (props) => {
                     <Image src={props.project.image[0]}/>
                 </ImageWrapper>
                 <Title>{props.project.name}</Title>
+                <Description>{props.project.description}</Description>
+                <TagsContainer>
+                    {props.project.tags.map((tag) => {
+                        return(
+                            <Tag>{tag}</Tag>
+                        )
+                    })}
+                </TagsContainer>
+                <ButtonContainer>
+                    <Button href={props.project.code} target="_blank" variant="outlined">Code</Button>
+                    <Button href={props.project.project}  target="_blank" variant="outlined">Project</Button>
+                </ButtonContainer>
             </ProjectWrapper>
         </Card>
     )
@@ -24,6 +36,7 @@ const ProjectWrapper = styled.div`
     min-height: 400px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 `
 
 const ImageWrapper = styled.div`
@@ -48,4 +61,36 @@ const Title = styled.h1`
     font-size: 20px;
     padding-left: 25px;
     padding-top: 15px;
+`
+
+const Description = styled.p`
+    font-family: 'Abel';
+    font-size: 15px;
+    padding-left: 25px;
+    padding-top: 5px;
+    line-height: 25px;
+`
+
+const TagsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    
+`
+
+const Tag = styled.a`
+    padding: 7px;
+    margin: 5px 10px 5px 5px;
+    background: #C0E4FC;
+    border-radius: 5px;
+    font-family: "Inconsolata";
+`
+
+const ButtonContainer = styled.div`
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 25px;
 `

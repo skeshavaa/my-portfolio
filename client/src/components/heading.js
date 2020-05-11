@@ -13,6 +13,7 @@ export default Heading
 
 const Wrapper = styled.div`
     width: 100vw;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
 `
