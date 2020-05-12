@@ -7,6 +7,7 @@ const Contact = () => {
         <div>
             <Layout />
             <Form />
+            
         </div>
     )
 }
