@@ -32,5 +32,5 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 80vw;
+    width: 90vw;
 `
