@@ -14,7 +14,7 @@ const DrawerContent = () => {
                 <Item text="Skills" route="/skills"></Item>
                 <Item text="Projects" route="/projects"></Item>
                 <Item text="Resume" route="/resume"></Item>
-                <Item text="Contact Me" route="/about"></Item>
+                <Item text="Contact Me" route="/resume"></Item>
             </List>
         </Wrapper>
     )
