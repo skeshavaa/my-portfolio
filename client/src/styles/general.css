@@ -15,6 +15,13 @@ html, body, head, p, h1, h2{
     color: black;
 }
 
+.contact-button{
+    max-width: 400px;
+    min-width: 200px;
+    height: 70px;
+    font-family: 'Abel';
+    width: 80%;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');

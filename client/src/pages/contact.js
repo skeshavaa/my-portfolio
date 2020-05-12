@@ -1,14 +1,14 @@
 import React from 'react'
 import Layout from '../components/layout'
-import Heading from '../components/heading'
+import Form from '../components/form'
 
-const Resume = () => {
+const Contact = () => {
     return (
         <div>
             <Layout />
-            <Heading title="Skills" />
+            <Form />
         </div>
     )
 }
 
-export default Resume
+export default Contact

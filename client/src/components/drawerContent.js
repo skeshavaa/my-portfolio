@@ -13,8 +13,7 @@ const DrawerContent = () => {
                 <Item text="Home" route="/"></Item>
                 <Item text="Skills" route="/skills"></Item>
                 <Item text="Projects" route="/projects"></Item>
-                <Item text="Resume" route="/resume"></Item>
-                <Item text="Contact Me" route="/resume"></Item>
+                <Item text="Contact Me" route="/contact"></Item>
             </List>
         </Wrapper>
     )
