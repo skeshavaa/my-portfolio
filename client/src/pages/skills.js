@@ -59,7 +59,6 @@ const Container = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 30px 10vw 0 10vw;
 `
 
 const CardWrapper = styled.div`

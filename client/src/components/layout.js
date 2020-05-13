@@ -31,6 +31,10 @@ export default Layout
 const Wrapper = styled.div`
     padding-left: 25px;
     padding-top: 25px;
+    @media (max-width: 500px){
+        padding-left: 5px;
+        padding-top: 5px;
+    }
 `
 
 const Sticky = styled.div`
