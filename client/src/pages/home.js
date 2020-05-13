@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Divider, IconButton } from '@material-ui/core'
 import  Layout  from '../components/layout.js'
 
-import Keshavaa from '../assets/images/me.jpg'
+import Keshavaa from '../assets/images/me.png'
 import styled from 'styled-components';
 
 const Home = () => {
