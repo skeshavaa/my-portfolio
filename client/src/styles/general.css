@@ -1,5 +1,6 @@
 html, body, head, p, h1, h2{
     margin: 0;
+    overflow-x: hidden;
 }
 
 .App{
