@@ -21,7 +21,12 @@ const Home = () => {
                 <Spacer space="30px" />
                 <Divider variant="middle" />
                 <Row>
-                    <Text padding="30px">Look at my stuff</Text>
+                    <Text padding="30px">
+                        I'm in 2nd year at the <Span>University of Toronto</Span><br/>
+                        I'm passionate about <Span>front and back end development</Span> and <Span>machine learning</Span><br/>
+                        Take a look around! Feel free to reach out and check out my Resume!
+
+                    </Text>
                 </Row>
             </Wrapper>
         </div>
@@ -55,6 +60,11 @@ const Avatar = styled.img`
 
 const Spacer = styled.div`
     padding: ${props => props.space}
+`
+
+const Span = styled.span`
+    color: black;
+    font-weight: bolder;
 `
 
 

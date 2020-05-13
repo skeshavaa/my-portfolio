@@ -13,7 +13,7 @@ const Layout = () => {
     };
 
     return (
-        <div>
+        <Sticky>
             <Wrapper>
                 <IconButton size="medium" onClick={handler}>
                     <MenuIcon />
@@ -22,7 +22,7 @@ const Layout = () => {
             <Drawer open={Handler} onClose={handler}>
                 <DrawerContent />
             </Drawer>
-        </div>
+        </Sticky>
     )
 }
 
@@ -31,4 +31,9 @@ export default Layout
 const Wrapper = styled.div`
     padding-left: 25px;
     padding-top: 25px;
+`
+
+const Sticky = styled.div`
+    position: sticky;
+    top: 0px;
 `
