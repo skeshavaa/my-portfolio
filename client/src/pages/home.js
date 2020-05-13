@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Divider, IconButton } from '@material-ui/core'
 import  Layout  from '../components/layout.js'
 
-// import Keshavaa from '../assets/images/me.jpg'
+import Keshavaa from '../assets/images/me.jpg'
 import styled from 'styled-components';
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
                     <Text padding="30px">Hi, I'm Keshavaa</Text>
                 </Row>
                 <Row>
-                    {/* <Avatar src={Keshavaa} /> */}
+                    <Avatar src={Keshavaa} />
                 </Row>
                 <Spacer space="30px" />
                 <Divider variant="middle" />
