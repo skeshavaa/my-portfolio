@@ -9,7 +9,9 @@ import Logo from '../assets/images/Logo.png'
 const DrawerContent = () => {
     return (
         <Wrapper>
+            <ImageWrapper>
             <Image src={Logo} />
+            </ImageWrapper>
             <List>
                 <Item text="Home" route="/"></Item>
                 <Item text="Skills" route="/skills"></Item>
@@ -30,9 +32,14 @@ const Wrapper = styled.div`
     width: 300px;
 `
 
+const ImageWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
 const Image = styled.img`
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
 `
 
 const ResumeWrapper = styled.div`
