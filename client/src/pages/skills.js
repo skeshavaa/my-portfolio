@@ -68,7 +68,7 @@ const CardWrapper = styled.div`
 const Column = styled.div`
     display: flex;
     flex-direction: column;
-    min-width: 300px;
+    min-width: 200px;
     max-width: 500px;
     min-height: 400px;
 `
@@ -88,7 +88,9 @@ const Listing = styled.div`
 `
 
 const Image = styled.img`
-    min-width: 300px;
-    height: 200px;
+    min-width: 200px;
+    max-width: 300px;
+    width: 100%;
+    max-height: 200px;
     box-fit: cover;
 `
