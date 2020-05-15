@@ -43,8 +43,10 @@ const Heading = styled.h1`
 `
 
 const Image = styled.img`
-    width: 50%;
-    min-width:200px;
+    min-width: 200px;
+    max-width: 300px;
+    width: 100%;
+    max-height: 200px;
     box-fit: cover;
 `
 
