@@ -43,11 +43,13 @@ const Image = styled.img`
     min-width:200px;
     min-height: 200px;
     max-height: 300px;
+    box-fit: cover;
 `
 
 const ImageWrapper = styled.div`
     display: flex;
     padding-top: 20px;
     justify-content: center;
+    box-fit: cover;
 `
 
