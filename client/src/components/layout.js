@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import theme from '../styles/theme'
 import MenuIcon from '@material-ui/icons/Menu'
-import { Fab, Drawer, MuiThemeProvider } from '@material-ui/core'
+import { Fab, Drawer, MuiThemeProvider, IconButton, Menu } from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles';
 import DrawerContent from './drawerContent'
 import styled from 'styled-components'
 
-const Layout = () => {
+const Layout = (props) => {
     const [Handler, setHandler] = useState(false)
 
     const handler = (e) => {
@@ -13,14 +14,15 @@ const Layout = () => {
         setHandler(!Handler);
     };
 
+
     return (
         <Sticky>
             <Wrapper>
-                <MuiThemeProvider theme={theme}>
-                    <Fab size="medium" onClick={handler} className="floating" color="primary">
+                <ButtonWrapper>
+                    <IconButton classes={{root: 'roott'}} onClick={handler}>
                         <MenuIcon />
-                    </Fab>
-                </MuiThemeProvider>
+                    </IconButton>
+                </ButtonWrapper>
             </Wrapper>
             <Drawer open={Handler} onClose={handler}>
                 <DrawerContent />
@@ -30,6 +32,8 @@ const Layout = () => {
 }
 
 export default Layout
+
+
 
 const Wrapper = styled.div`
     padding-left: 25px;
@@ -44,4 +48,10 @@ const Sticky = styled.div`
     position: sticky;
     position:-webkit-sticky;
     top: 0;
+`
+
+const ButtonWrapper = styled.div`
+    width: 54px;
+    border-radius: 50%;
+    box-shadow: 1px 3px 5px #bfbfbf;
 `

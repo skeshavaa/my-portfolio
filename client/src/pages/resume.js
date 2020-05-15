@@ -29,7 +29,6 @@ const Resume = () => {
                     <GetAppIcon />
                 </Fab>
             </ButtonWrapper>
-            <Wrapper></Wrapper>
         </Wrapper>
     )
 }
