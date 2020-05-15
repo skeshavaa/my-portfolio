@@ -40,7 +40,7 @@ const ProjectCard = (props) => {
 export default ProjectCard
 
 const OuterWrapper = styled.div`
-margin: 15px 5px 15px 5px; 
+    margin: 15px 5px 15px 5px; 
 `
 
 const ProjectWrapper = styled.div`
