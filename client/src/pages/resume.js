@@ -48,7 +48,7 @@ const Wrapper = styled.div`
 
 const ResumeWrapper = styled.div`
     display: flex;
-    width: 100vw;
+    width: 98vw;
     flex-wrap: wrap;
     justify-content: space-around;
     max-width: 90vw;
@@ -58,7 +58,7 @@ const ResumeWrapper = styled.div`
 
 const Center = styled.div`
     display: flex;
-    width: 100vw;
+    width: 98vw;
     justify-content: center;
 `
 

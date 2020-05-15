@@ -37,5 +37,5 @@ const Projects = () => {
 export default Projects
 
 const Wrapper = styled.div`
-    max-width: 100vw;
+    width: 98vw;
 `

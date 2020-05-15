@@ -16,13 +16,9 @@ const DrawerContent = () => {
                 <Item text="Home" route="/"></Item>
                 <Item text="Skills" route="/skills"></Item>
                 <Item text="Projects" route="/projects"></Item>
-                <Item text="Contact Me" route="/contact"></Item>
                 <Item text="Resume" route="/resume"></Item>
+                <Item text="Contact Me" route="/contact"></Item>
             </List>
-            <ResumeWrapper>
-                <Download />
-                <ItemText>Resume</ItemText> 
-            </ResumeWrapper>
         </Wrapper>
     )
 }
@@ -41,17 +37,4 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
     width: 150px;
     height: 150px;
-`
-
-const ResumeWrapper = styled.div`
-    display: flex;
-    padding-left: 15px;
-    align-items: center;
-`
-
-
-const ItemText = styled.p`
-    font-family: "Raleway";
-    font-size: 20px;
-    padding-left: 20px;
 `

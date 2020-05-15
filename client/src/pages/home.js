@@ -4,13 +4,14 @@ import  Layout  from '../components/layout.js'
 import DocResume from '../assets/documents/Resume.pdf'
 import Keshavaa from '../assets/images/me.png'
 import styled from 'styled-components';
+import Spacer from '../components/spacer.js'
 
 const Home = () => {
 
     return (
-        <Wrapper>
+        <div>
             <Layout />
-            <div>
+            <Wrapper>
                 <Row>
                     <Text padding="30px">Hi, I'm Keshavaa</Text>
                 </Row>
@@ -31,8 +32,9 @@ const Home = () => {
                     <ButtonText>Download My Resume</ButtonText>
                 </Button>
                 </Row>
-            </div>
-        </Wrapper>
+            </Wrapper>
+            <Spacer space="20px"/>
+        </div>
     )
 }
 
@@ -45,7 +47,7 @@ const Wrapper = styled.div`
 const Row = styled.div`
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 98vw;
 `
 
 const Text = styled.p`
@@ -68,9 +70,6 @@ const Avatar = styled.img`
     border-radius: 50%;
 `
 
-const Spacer = styled.div`
-    padding: ${props => props.space}
-`
 
 const Span = styled.span`
     color: black;

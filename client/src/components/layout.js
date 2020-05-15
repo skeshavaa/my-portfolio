@@ -40,12 +40,15 @@ const Wrapper = styled.div`
         padding-left: 5px;
         padding-top: 5px;
     }
+    position: sticky;
+    position:-webkit-sticky;
+    top: 0px;
 `
 
 const Sticky = styled.div`
     position: sticky;
     position:-webkit-sticky;
-    top: 0;
+    top: 0px;
 `
 
 const ButtonWrapper = styled.div`

@@ -2,20 +2,25 @@ import React, { useState } from "react";
 import axios from "axios";
 import styled from 'styled-components'
 import Heading from "./heading"
-import { Button, Card } from '@material-ui/core'
+import { Button, Card, Snackbar } from '@material-ui/core'
 import SendIcon from '@material-ui/icons/Send';
 import Contact from '../assets/images/Contact.png'
+import { Alert } from "@material-ui/lab";
 
 const Form = () => {
   const [serverState, setServerState] = useState({
     submitting: false,
     status: null
   });
+
+  const [open, setOpen] = useState(false)
+
   const handleServerResponse = (ok, msg, form) => {
     setServerState({
       submitting: false,
       status: { ok, msg }
     });
+    setOpen(true)
     if (ok) {
       form.reset();
     }
@@ -38,6 +43,9 @@ const Form = () => {
       });
   };
 
+  const handleClose = () => {
+    setOpen(!open);
+  };
 
   return (
     <Wrapper>
@@ -53,11 +61,18 @@ const Form = () => {
         </Button>
         
         </ButtonWrapper>
-        {serverState.status && (
-          <p className={!serverState.status.ok ? "errorMsg" : ""}>
-            {serverState.status.msg}
-          </p>
-        )}
+
+
+        {serverState.status && serverState.status.ok
+          ? 
+            <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+              <Alert severity="success" onClose={handleClose}>
+                Sent!
+              </Alert>
+            </Snackbar> 
+          : <div></div>
+        
+        }
         
       </FormWrapper>
     </Wrapper>
