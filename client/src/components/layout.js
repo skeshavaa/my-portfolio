@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import theme from '../styles/theme'
 import MenuIcon from '@material-ui/icons/Menu'
-import { IconButton, Drawer } from '@material-ui/core'
+import { Fab, Drawer, MuiThemeProvider } from '@material-ui/core'
 import DrawerContent from './drawerContent'
 import styled from 'styled-components'
 
@@ -15,9 +16,11 @@ const Layout = () => {
     return (
         <Sticky>
             <Wrapper>
-                <IconButton size="medium" onClick={handler}>
-                    <MenuIcon />
-                </IconButton>
+                <MuiThemeProvider theme={theme}>
+                    <Fab size="medium" onClick={handler} className="floating" color="primary">
+                        <MenuIcon />
+                    </Fab>
+                </MuiThemeProvider>
             </Wrapper>
             <Drawer open={Handler} onClose={handler}>
                 <DrawerContent />
@@ -39,5 +42,6 @@ const Wrapper = styled.div`
 
 const Sticky = styled.div`
     position: sticky;
-    top: 0px;
+    position:-webkit-sticky;
+    top: 0;
 `

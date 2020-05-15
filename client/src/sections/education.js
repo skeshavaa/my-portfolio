@@ -17,7 +17,9 @@ const Education = () => {
                 <Heading size="20px">Computer Science, Software Engineering Specialist</Heading>
                 <Spacer space="10px"/>
                 <Heading size="20px">GPA: 3.6</Heading>
-                <Image src={EducationPicture} />
+                <ImageWrapper>
+                    <Image src={EducationPicture} />
+                </ImageWrapper>
             </Inside>
         </Card>
     )
@@ -40,5 +42,11 @@ const Heading = styled.h1`
 const Image = styled.img`
     width: 50%;
     min-width:200px;
+`
+
+const ImageWrapper = styled.div`
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
 `
 

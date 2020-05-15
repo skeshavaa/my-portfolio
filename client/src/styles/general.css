@@ -1,6 +1,5 @@
 html, body, head, p, h1, h2{
     margin: 0;
-    overflow-x: hidden;
 }
 
 .App{
@@ -22,6 +21,10 @@ html, body, head, p, h1, h2{
     height: 70px;
     font-family: 'Abel';
     width: 80%;
+}
+
+.MuiFab-root{
+    background-color: red;
 }
 
 

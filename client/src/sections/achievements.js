@@ -21,7 +21,9 @@ const Achievements = () => {
                         </div>
                     )
                 })}
-                <Image src={Achievement}/>
+                <ImageWrapper>
+                    <Image src={Achievement}/>
+                </ImageWrapper>
             </Inside>
         </Card>
     )
@@ -44,5 +46,11 @@ const Heading = styled.h1`
 const Image = styled.img`
     width: 50%;
     min-width:200px;
+`
+
+const ImageWrapper = styled.div`
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
 `
 

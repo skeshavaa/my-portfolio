@@ -36,7 +36,7 @@ const Home = () => {
 export default Home
 
 const Wrapper = styled.div`
-
+    height: 110vh;
 `
 
 const Row = styled.div`
