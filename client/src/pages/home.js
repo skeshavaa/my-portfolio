@@ -21,12 +21,12 @@ const Home = () => {
                 <Spacer space="30px" />
                 <Divider variant="middle" />
                 <Row>
-                    <Text padding="30px">
+                    <About padding="30px">
                         I'm in 2nd year at the <Span>University of Toronto</Span><br/>
                         I'm passionate about <Span>front and back end development</Span> and <Span>machine learning</Span><br/>
                         Take a look around! Feel free to reach out and check out my Resume!
 
-                    </Text>
+                    </About>
                 </Row>
             </Wrapper>
         </div>
@@ -48,6 +48,13 @@ const Row = styled.div`
 const Text = styled.p`
     font-family: 'Abel';
     font-size: 50px;
+    text-align: center;
+    padding: ${props => props.padding}
+`
+
+const About = styled.p`
+    font-family: 'Abel';
+    font-size: 20px;
     text-align: center;
     padding: ${props => props.padding}
 `

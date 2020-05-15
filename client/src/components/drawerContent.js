@@ -17,6 +17,7 @@ const DrawerContent = () => {
                 <Item text="Skills" route="/skills"></Item>
                 <Item text="Projects" route="/projects"></Item>
                 <Item text="Contact Me" route="/contact"></Item>
+                <Item text="Resume" route="/resume"></Item>
             </List>
             <ResumeWrapper>
                 <Download />

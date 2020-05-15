@@ -1,0 +1,24 @@
+{
+    "jobs": [
+        {
+            "employer": "Developer Student Club",
+            "position": "Developer",
+            "date": "2019 Fall - Present",
+            "details": [
+                "Created a mobile flutter app for Canadian immigrants to find employment upon arriving in Canada",
+                "Worked with a number of Google technologies like Flutter and Firebase",
+                "Received Google Cloud Certification"
+            ]
+        },
+        {
+            "employer": "Validus Research",
+            "position": "Front-end Developer",
+            "date": "June 2018 - August 2018",
+            "details": [
+                "Responsible for the UI and debugging of company intranet website and resources",
+                "Created web applications using Vue.js framework",
+                "Designed layout and programmed interactions between users and GUI controls"
+            ]
+        }
+    ]
+}
