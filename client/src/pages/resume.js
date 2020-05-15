@@ -1,16 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Fab } from '@material-ui/core'
+import { Divider, Button } from '@material-ui/core'
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Layout from '../components/layout'
 import Education from '../sections/education'
 import Experience from '../sections/experience'
 import Achievements from '../sections/achievements'
+import Heading from '../components/heading'
+import Spacer from '../components/spacer';
+import DocResume from '../assets/documents/Resume.pdf'
 
 const Resume = () => {
     return (
         <Wrapper>
             <Layout />
+            <Heading title="Resume"/>
+
             <Center>
                 <ResumeWrapper>
                     <Spacing>
@@ -24,11 +29,13 @@ const Resume = () => {
                     </Spacing>
                 </ResumeWrapper>
             </Center>
-            <ButtonWrapper>
-                <Fab>
-                    <GetAppIcon />
-                </Fab>
-            </ButtonWrapper>
+            <Spacer space="25px"/>
+            <Center>
+                <Button variant="outlined" href={DocResume} target="_blank">
+                    <ButtonText>Download My Resume</ButtonText>
+                </Button>
+            </Center>
+            <Spacer space="25px"/>
         </Wrapper>
     )
 }
@@ -69,6 +76,12 @@ const ButtonWrapper = styled.div`
     display: flex;
     width: 100vw;
     justify-content: flex-end;
+`
+
+const ButtonText = styled.h1`
+    font-family: 'Abel';
+    font-size: 20px;
+    padding: 15px;
 `
 
 

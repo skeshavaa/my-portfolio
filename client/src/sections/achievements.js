@@ -34,7 +34,6 @@ export default Achievements
 const Inside = styled.div`
     min-width: 200px;
     max-width: 500px;
-    width: 100vw;
     padding: 20px;
 `
 

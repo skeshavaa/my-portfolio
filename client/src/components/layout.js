@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import theme from '../styles/theme'
 import MenuIcon from '@material-ui/icons/Menu'
-import { Fab, Drawer, MuiThemeProvider, IconButton, Menu } from '@material-ui/core'
-import { withStyles } from '@material-ui/core/styles';
+import {  Drawer, IconButton } from '@material-ui/core'
 import DrawerContent from './drawerContent'
 import styled from 'styled-components'
 

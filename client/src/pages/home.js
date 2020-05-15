@@ -1,17 +1,16 @@
-import React, { useState } from 'react'
-import axios from 'axios';
-import { Divider, IconButton } from '@material-ui/core'
+import React from 'react'
+import { Divider, Button } from '@material-ui/core'
 import  Layout  from '../components/layout.js'
-
+import DocResume from '../assets/documents/Resume.pdf'
 import Keshavaa from '../assets/images/me.png'
 import styled from 'styled-components';
 
 const Home = () => {
 
     return (
-        <div>
+        <Wrapper>
             <Layout />
-            <Wrapper>
+            <div>
                 <Row>
                     <Text padding="30px">Hi, I'm Keshavaa</Text>
                 </Row>
@@ -25,18 +24,22 @@ const Home = () => {
                         I'm in 2nd year at the <Span>University of Toronto</Span><br/>
                         I'm passionate about <Span>front and back end development</Span> and <Span>machine learning</Span><br/>
                         Take a look around! Feel free to reach out and check out my Resume!
-
                     </About>
                 </Row>
-            </Wrapper>
-        </div>
+                <Row>
+                <Button variant="outlined" href={DocResume} target="_blank">
+                    <ButtonText>Download My Resume</ButtonText>
+                </Button>
+                </Row>
+            </div>
+        </Wrapper>
     )
 }
 
 export default Home
 
 const Wrapper = styled.div`
-    height: 110vh;
+    min-height: 100vh;
 `
 
 const Row = styled.div`
@@ -74,4 +77,9 @@ const Span = styled.span`
     font-weight: bolder;
 `
 
+const ButtonText = styled.h1`
+    font-family: 'Abel';
+    font-size: 20px;
+    padding: 15px;
+`
 
