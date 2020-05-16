@@ -13,11 +13,11 @@ const DrawerContent = () => {
             <Image src={Logo} />
             </ImageWrapper>
             <List>
-                <Item text="Home" route="#home"></Item>
-                <Item text="Skills" route="#skills"></Item>
-                <Item text="Projects" route="#projects"></Item>
-                <Item text="Resume" route="#resume"></Item>
-                <Item text="Contact Me" route="#contact"></Item>
+                <Item text="Home" route="/"></Item>
+                <Item text="Skills" route="/skills"></Item>
+                <Item text="Projects" route="/projects"></Item>
+                <Item text="Resume" route="/resume"></Item>
+                <Item text="Contact Me" route="/contact"></Item>
             </List>
         </Wrapper>
     )

@@ -5,7 +5,8 @@ import Spacer from '../components/spacer'
 
 const Contact = () => {
     return (
-        <div id="contact" className="hide-overflow">
+        <div>
+            <Layout />
             <Form />
             <Spacer space="20px"/>
         </div>

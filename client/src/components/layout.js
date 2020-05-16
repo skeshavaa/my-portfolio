@@ -43,7 +43,6 @@ const Wrapper = styled.div`
     position: sticky;
     position:-webkit-sticky;
     top: 0px;
-    width: 50vw;
 `
 
 const Sticky = styled.div`

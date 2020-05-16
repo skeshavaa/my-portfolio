@@ -24,7 +24,7 @@ export default ProjectCards
 const OuterWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 98vw;
     justify-content: center;
 `
 

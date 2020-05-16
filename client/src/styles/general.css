@@ -1,11 +1,7 @@
 html, body, head, p, h1, h2{
     margin: 0;
-    scroll-behavior: inherit;
 }
 
-html, body{
-    width: 100%;
-}
 .App{
     display: flex;
 }
@@ -38,10 +34,6 @@ html, body{
 
 .roott{
     background-color: white;
-}
-
-.hide-overflow{
-    overflow-x: hidden;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');

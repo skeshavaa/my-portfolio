@@ -26,7 +26,8 @@ const Projects = () => {
         : <ProjectCards projects={data}/>
 
     return (
-        <Wrapper id="projects"  className="hide-overflow">
+        <Wrapper>
+            <Layout />
             <Heading title="Projects"/>
             {Cards}
         </Wrapper>
@@ -36,6 +37,5 @@ const Projects = () => {
 export default Projects
 
 const Wrapper = styled.div`
-    width: 100%;
-    padding-top: 20px;
+    width: 98vw;
 `
