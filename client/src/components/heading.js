@@ -12,7 +12,7 @@ const Heading = (props) => {
 export default Heading
 
 const Wrapper = styled.div`
-    width: 98vw;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 30px;
     display: flex;

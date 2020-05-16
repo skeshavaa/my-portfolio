@@ -5,11 +5,11 @@ import styled from 'styled-components'
 
 const Item = (props) => {
     return (
-        <Link to={props.route} className="link">
+        <A href={props.route}>
             <ListItem button>
                 <ListItemText><ItemText>{props.text}</ItemText></ListItemText>
             </ListItem>
-        </Link>
+        </A>
     )
 }
 
@@ -18,4 +18,9 @@ export default Item
 const ItemText = styled.p`
     font-family: "Raleway";
     font-size: 20px;
+`
+
+const A = styled.a`
+    text-decoration: none;
+    color: black;
 `

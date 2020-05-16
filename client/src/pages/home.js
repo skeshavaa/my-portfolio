@@ -9,11 +9,10 @@ import Spacer from '../components/spacer.js'
 const Home = () => {
 
     return (
-        <div>
-            <Layout />
+        <div id="home" className="hide-overflow">
             <Wrapper>
                 <Row>
-                    <Text padding="30px">Hi, I'm Keshavaa</Text>
+                    <Text padding="10px">Hi, I'm Keshavaa</Text>
                 </Row>
                 <Row>
                     <Avatar src={Keshavaa} />
@@ -47,7 +46,7 @@ const Wrapper = styled.div`
 const Row = styled.div`
     display: flex;
     justify-content: center;
-    width: 98vw;
+    width: 100%;
 `
 
 const Text = styled.p`

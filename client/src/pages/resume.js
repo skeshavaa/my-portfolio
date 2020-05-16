@@ -12,8 +12,7 @@ import DocResume from '../assets/documents/Resume.pdf'
 
 const Resume = () => {
     return (
-        <Wrapper>
-            <Layout />
+        <Wrapper id="resume"  className="hide-overflow">
             <Heading title="Resume"/>
 
             <Center>
@@ -43,12 +42,12 @@ const Resume = () => {
 export default Resume
 
 const Wrapper = styled.div`
-    min-height: 100vh;
+
 `
 
 const ResumeWrapper = styled.div`
     display: flex;
-    width: 98vw;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
     max-width: 90vw;
@@ -58,7 +57,7 @@ const ResumeWrapper = styled.div`
 
 const Center = styled.div`
     display: flex;
-    width: 98vw;
+    width: 100%;
     justify-content: center;
 `
 
@@ -74,7 +73,7 @@ const ButtonWrapper = styled.div`
     position: sticky;
     bottom: 0;
     display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: flex-end;
 `
 

@@ -42,17 +42,20 @@ const Skills = () => {
     }
 
     return (
-        <div>
-            <Layout />
+        <Wrapper id="skills"  className="hide-overflow">
             <Heading title="Skills" />
             <Container>
                 {SkillsList}
             </Container>
-        </div>
+        </Wrapper>
     )
 }
 
 export default Skills
+
+const Wrapper = styled.div`
+    padding-top: 20px;
+`
 
 const Container = styled.div`
     display: flex;
