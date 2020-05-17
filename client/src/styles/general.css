@@ -36,6 +36,10 @@ html, body, head, p, h1, h2{
     background-color: white;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
