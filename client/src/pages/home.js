@@ -3,6 +3,8 @@ import { Divider, Button } from '@material-ui/core'
 import  Layout  from '../components/layout.js'
 import DocResume from '../assets/documents/Resume.pdf'
 import Keshavaa from '../assets/images/me.png'
+import GitHubIcon from '@material-ui/icons/GitHub';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import styled from 'styled-components';
 import Spacer from '../components/spacer.js'
 
@@ -28,9 +30,17 @@ const Home = () => {
                     </About>
                 </Row>
                 <Row>
-                <Button variant="outlined" href={DocResume} target="_blank">
-                    <ButtonText>Download My Resume</ButtonText>
-                </Button>
+                    <Button variant="outlined" href={DocResume} target="_blank" endIcon={<ArrowDownwardIcon />}>
+                        <ButtonText>Resume</ButtonText>
+                    </Button>
+                    <Width />
+                    <Button variant="outlined" href="https://github.com/skeshavaa" target="_blank" startIcon={<GitHubIcon />}>
+                        <ButtonText>Github</ButtonText>
+                    </Button>
+                </Row>
+                
+                <Row>
+                
                 </Row>
             </Wrapper>
             <Spacer space="20px"/>
@@ -44,10 +54,15 @@ const Wrapper = styled.div`
     min-height: 100vh;
 `
 
+const Width = styled.div`
+    width: 20px;
+`
+
 const Row = styled.div`
     display: flex;
     justify-content: center;
     width: 98vw;
+    flex-wrap: wrap;
 `
 
 const Text = styled.p`
