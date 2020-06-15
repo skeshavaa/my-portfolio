@@ -4,6 +4,7 @@ import  Layout  from '../components/layout.js'
 import DocResume from '../assets/documents/Resume.pdf'
 import Keshavaa from '../assets/images/me.png'
 import GitHubIcon from '@material-ui/icons/GitHub';
+import InstagramIcon from '@material-ui/icons/Instagram'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import styled from 'styled-components';
 import Spacer from '../components/spacer.js'
@@ -30,12 +31,11 @@ const Home = () => {
                     </About>
                 </Row>
                 <Row>
-                    <Button variant="outlined" href={DocResume} target="_blank" endIcon={<ArrowDownwardIcon />}>
-                        <ButtonText>Resume</ButtonText>
+                    <Button href="https://github.com/skeshavaa" target="_blank" >
+                        <GitHubIcon />
                     </Button>
-                    <Width />
-                    <Button variant="outlined" href="https://github.com/skeshavaa" target="_blank" startIcon={<GitHubIcon />}>
-                        <ButtonText>Github</ButtonText>
+                    <Button href="https://www.instagram.com/s.keshavaa/" target="_blank" >
+                        <InstagramIcon />
                     </Button>
                 </Row>
                 
